@@ -1,2 +1,2 @@
-# eCommerce-ci-artifacts
-Continues Integration Eco system artifacts for eCommerce Projects
+# Azure DevOps POC - Java Micro Service Deployment
+DevOps POC - Using Azure Pipelines.
