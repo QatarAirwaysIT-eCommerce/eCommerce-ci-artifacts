@@ -1,0 +1,39 @@
+server:
+  port: ${PORT:9090}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+spring:
+  boot:
+     admin:
+        instance:
+           metadata:
+              tags:
+                 environment: Test
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  zipkin:
+    base-url: http://localhost:9411/
+          
+logging:
+  file: "D:/New_Projects/DevOps/DockerPOC/logs/employee-services.log"
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx" 
+
+management:
+   security:
+      enabled: false
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+   endpoint:
+    health:
+      show-details: ALWAYS
+            
+info.tags.environment: Test Environment              

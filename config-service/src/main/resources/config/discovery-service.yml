@@ -1,0 +1,42 @@
+server:
+  port: ${PORT:8061}
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+spring:
+  boot:
+     admin:
+        client:
+           url: http://localhost:8080
+        instance:
+           metadata:
+              tags:
+                 environment: Test           
+  zipkin:
+    base-url: http://localhost:9411/
+
+logging:
+  file: "D:/New_Projects/DevOps/DockerPOC/logs/discovery-services.log"
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx" 
+
+management:
+   security:
+      enabled: false
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+   endpoint:
+    health:
+      show-details: ALWAYS
+
+info.tags.environment: Test Environment       

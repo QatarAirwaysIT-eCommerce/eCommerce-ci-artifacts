@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+eureka:
+   instance:
+     leaseRenewalIntervalInSeconds: 10
+     health-check-url-path: /actuator/health
+     metadata-map:
+       startup: ${random.int}    #needed to trigger info and endpoint update after restart
+     client:
+        registryFetchIntervalSeconds: 5
+        serviceUrl:
+           defaultZone: http://localhost:8061/eureka/
+
+application:
+    spring:
+      boot:
+        admin:
+          client:
+            url: 'http://localhost:8080'
+            instance:
+              metadata:
+                tags:
+                  environment: Test
+          notify:
+            mail:
+              enabled: "false"
+              ignore-changes: '"UNKNOWN:UP"'
+              to: sureshbabu@qatarairways.com.qa
+              cc: sureshbabu@qatarairways.com.qa
+              from: 'Spring Boot Admin <noreply@sba-admin.com.qa>'
+              host: qrsmtp.qatarairways.com.qa
+
+management:
+    endpoints:
+      web:
+        exposure:
+          include: '*'
+        endpoint:
+           health:
+              show-details: ALWAYS
+        jmx:
+           enabled: true
+logging:
+    file: 'D:/New_Projects/DevOps/DockerPOC/logs/sba-application.log'
+    pattern:
+       file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx'
+       console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    info:
+      tags:
+        environment: '*** Test - Environment ***'
