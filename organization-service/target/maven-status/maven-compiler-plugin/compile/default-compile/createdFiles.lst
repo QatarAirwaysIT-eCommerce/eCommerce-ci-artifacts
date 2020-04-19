@@ -1,0 +1,8 @@
+com\qr\services\organization\client\EmployeeClient.class
+com\qr\services\organization\model\Department.class
+com\qr\services\organization\client\DepartmentClient.class
+com\qr\services\organization\controller\OrganizationController.class
+com\qr\services\organization\OrganizationApplication.class
+com\qr\services\organization\model\Employee.class
+com\qr\services\organization\model\Organization.class
+com\qr\services\organization\repository\OrganizationRepository.class

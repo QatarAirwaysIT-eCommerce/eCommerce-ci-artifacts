@@ -1,0 +1,8 @@
+D:\New_Projects\DevOps\DockerPOC\spring-cloud-microservices\organization-service\src\main\java\com\qr\services\organization\model\Department.java
+D:\New_Projects\DevOps\DockerPOC\spring-cloud-microservices\organization-service\src\main\java\com\qr\services\organization\repository\OrganizationRepository.java
+D:\New_Projects\DevOps\DockerPOC\spring-cloud-microservices\organization-service\src\main\java\com\qr\services\organization\client\DepartmentClient.java
+D:\New_Projects\DevOps\DockerPOC\spring-cloud-microservices\organization-service\src\main\java\com\qr\services\organization\controller\OrganizationController.java
+D:\New_Projects\DevOps\DockerPOC\spring-cloud-microservices\organization-service\src\main\java\com\qr\services\organization\client\EmployeeClient.java
+D:\New_Projects\DevOps\DockerPOC\spring-cloud-microservices\organization-service\src\main\java\com\qr\services\organization\model\Employee.java
+D:\New_Projects\DevOps\DockerPOC\spring-cloud-microservices\organization-service\src\main\java\com\qr\services\organization\model\Organization.java
+D:\New_Projects\DevOps\DockerPOC\spring-cloud-microservices\organization-service\src\main\java\com\qr\services\organization\OrganizationApplication.java
